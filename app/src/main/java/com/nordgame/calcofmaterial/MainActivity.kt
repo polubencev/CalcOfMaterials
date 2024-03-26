@@ -15,7 +15,7 @@ import com.nordgame.calcofmaterial.ui.components.GUI_BottomBar
 import com.nordgame.calcofmaterial.ui.theme.CalcOfMaterialsTheme
 
 class MainActivity : ComponentActivity() {
-    fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             CalcOfMaterialsTheme {

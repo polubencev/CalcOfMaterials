@@ -17,12 +17,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.RectangleShape
@@ -94,10 +97,14 @@ fun GUI_Bottom_Fragment(_title: String, _icon: Int, _readOnly: Boolean, _value: 
                     .weight(2f)
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(2.dp))
-                    .background(Color.LightGray),
+                    .background(Color.LightGray)
+                    ,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 singleLine = true
+
             )
+
+            }
         }
     }
 }
